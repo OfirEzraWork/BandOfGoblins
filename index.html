@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <script defer src="script.js"></script>
     <title>Band of Goblins</title>
   </head>
   <body>
@@ -33,13 +36,43 @@
             <li class="nav-item"><a href="#">Fifth</a></li>
           </ul>
         </nav>
+        <button class="mobile-nav-buttons">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mobile-nav-button-icon"
+            name="menu"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mobile-nav-button-icon"
+            name="close"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </header>
       <div class="hero">
         <div class="hero-text">
           <header>
-            <h1 class="hero-header margin--bottom--medium">
-              Welcome to the world of Atlas!
-            </h1>
+            <h1 class="hero-header">Welcome to the world of Atlas!</h1>
           </header>
           <p class="margin--bottom--medium-small">
             Explore the world of Atlas. Plunder the many ruins of the
@@ -54,7 +87,6 @@
           </p>
           <a href="#" class="btn btn--full">Start Adventuring</a>
         </div>
-        <div>&nbsp;</div>
       </div>
     </section>
 
@@ -154,14 +186,25 @@
               <img src="icons/star_full.png" />
             </div>
           </div>
-          <img src="images/nicki.png" class="testimonial-image-nicki" />
+          <picture>
+            <source srcset="images/nicki-min.webp" type="image/webp" />
+            <img
+              src="images/nicki.png"
+              class="testimonial-image-nicki"
+              alt="nicki the female golden dragonborn"
+            />
+          </picture>
         </div>
 
         <div class="testimonial border-radius testimonial--left">
-          <img
-            src="images/durgan.png"
-            class="testimonial-image-square border-radius"
-          />
+          <picture>
+            <source srcset="images/durgan-min.webp" type="image/webp" />
+            <img
+              src="images/durgan.png"
+              class="testimonial-image-square border-radius"
+              alt="durgan the male half orc barbarian"
+            />
+          </picture>
           <div class="testimonial-text">
             <p class="testimonial-text-quote">
               Started out looking for a treasure and now my brother is working
@@ -195,17 +238,24 @@
               <img src="icons/star_empty.png" />
             </div>
           </div>
-          <img
-            src="images/ben.jpg"
-            class="testimonial-image-square border-radius"
-          />
+          <picture>
+            <source srcset="images/ben-min.webp" type="image/webp" />
+            <img
+              src="images/ben.jpg"
+              class="testimonial-image-square border-radius"
+              alt="ben the male golden dragonborn sorcerer"
+            />
+          </picture>
         </div>
 
         <div class="testimonial border-radius testimonial--left">
-          <img
-            src="images/ruth.jpg"
-            class="testimonial-image-square border-radius"
-          />
+          <picture>
+            <source srcset="images/ruth-min.webp" type="image/webp" />
+            <img
+              src="images/ruth.jpg"
+              class="testimonial-image-square border-radius"
+            />
+          </picture>
           <div class="testimonial-text">
             <p class="testimonial-text-quote">
               I've set off on a wounderous adventure gaining knowledge, power
@@ -268,7 +318,9 @@
             </ul>
             <div class="shop-option-purchase">
               <p class="shop-option-price">9.99 &#8362;</p>
-              <a href="#" class="btn-small btn--full">Purchase</a>
+              <a href="#" class="btn-small btn--full shop-option-purchase-btn"
+                >Purchase</a
+              >
             </div>
           </div>
         </div>
@@ -310,7 +362,9 @@
             </ul>
             <div class="shop-option-purchase">
               <p class="shop-option-price">29.99 &#8362;</p>
-              <a href="#" class="btn-small btn--full">Purchase</a>
+              <a href="#" class="btn-small btn--full shop-option-purchase-btn"
+                >Purchase</a
+              >
             </div>
           </div>
         </div>
@@ -353,7 +407,9 @@
             </ul>
             <div class="shop-option-purchase">
               <p class="shop-option-price">49.99 &#8362;</p>
-              <a href="#" class="btn-small btn--full">Purchase</a>
+              <a href="#" class="btn-small btn--full shop-option-purchase-btn"
+                >Purchase</a
+              >
             </div>
           </div>
         </div>
@@ -370,7 +426,7 @@
             <p class="shop-option-header margin--bottom--medium-small">
               Monarch Package
             </p>
-            <ul class="shop-option-list margin--bottom--medium-small">
+            <ul class="shop-option-list shop-option-list--highlight">
               <li class="shop-option-list-item">
                 <img
                   class="shop-option-img-inline"
@@ -404,14 +460,12 @@
             </ul>
             <div class="shop-option-purchase">
               <p class="shop-option-price">59.99 &#8362;</p>
-              <a href="#" class="btn-small btn--full">Purchase</a>
+              <a href="#" class="btn-small btn--full shop-option-purchase-btn"
+                >Purchase</a
+              >
             </div>
           </div>
         </div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div class="shop-best_price">best Price</div>
       </div>
     </section>
     <section class="footer-section">
@@ -419,15 +473,15 @@
         Band of <strong>Goblins</strong>
       </p>
       <div class="footer-grid">
-        <p>
+        <p class="my-notes">
           Band of <strong>Goblins</strong> is the result of me combining my love
           for D&D and my career. This site is a celebration of my homebrew
           fantasy world of Atlas. The names of characters and places used here
-          are those i use for said world in the many campaigns i run in it.
+          are those i use in that world in the many campaigns i run in it.
           <br />Thank you for visiting and may your dice always roll a natural
           20.
         </p>
-        <div>
+        <div class="footer-column-contact">
           <h3 class="footer-column-header margin--bottom--small">Contact me</h3>
           <ul class="footer-contact-list">
             <li class="footer-contact-list-item">
@@ -457,19 +511,19 @@
           <p class="footer-credit-item">
             Goblin and social media icons made by
             <a
-              href="https://www.flaticon.com/authors/maxicons"
-              title="max.icons"
+              href="https://www.freepik.com"
+              title="Freepik"
               class="footer-credit-link"
-              >max.icons</a
+              >Freepik</a
             >
           </p>
           <p class="footer-credit-item">
             All other icons made by
             <a
-              href="https://www.freepik.com"
-              title="Freepik"
+              href="https://www.flaticon.com/authors/maxicons"
+              title="max.icons"
               class="footer-credit-link"
-              >Freepik</a
+              >max.icons</a
             >
           </p>
           <p class="footer-credit-item margin--bottom--small">
