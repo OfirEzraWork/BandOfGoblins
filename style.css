@@ -18,6 +18,7 @@ Paragraph default: 1.6
 
 - Shades:
 #6e0000
+#250606
 - Accents:
 - Greys:
 #111827
@@ -109,6 +110,9 @@ body {
 /***************************************/
 /*NAV SECTION                          */
 /***************************************/
+header {
+  position: relative;
+}
 .nav-block {
   /* background-color: #dc2626; */
   padding: 1.6rem 2.4rem;
@@ -146,6 +150,21 @@ body {
   text-decoration: none;
   color: #fef2f2;
 }
+.mobile-nav-buttons {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+.mobile-nav-button-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #fef2f2;
+}
+.mobile-nav-button-icon[name="close"] {
+  display: none;
+}
 
 /***************************************/
 /*HERO SECTION                         */
@@ -153,7 +172,7 @@ body {
 
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("images/Thural.jpg");
+    url("images/thural-min.jpg");
   height: 100vh;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -161,24 +180,35 @@ body {
 }
 
 .hero {
-  margin: 6.4rem auto;
+  margin: 12rem auto;
   max-width: 130rem;
 
   color: #fef2f2;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hero-text {
-  padding: 6.4rem 3.2rem;
-  max-width: 50%;
+  padding: 6.4rem 14.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .hero-header {
+  margin-bottom: 4.8rem;
   font-size: 5.2rem;
+  text-align: center;
+  transition: all 0.5 ease-in;
 }
 .hero-text p {
   font-size: 1.8rem;
   line-height: 1.6;
+  text-align: center;
+}
+.hero-text .btn {
+  text-align: center;
 }
 
 /***************************************/
@@ -191,6 +221,12 @@ body {
 }
 .features-header {
   font-size: 4.4rem;
+}
+.features-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 2.4rem;
 }
 .features-card {
   padding: 1.6rem 2.4rem;
@@ -216,25 +252,18 @@ body {
   line-height: 1.6;
   font-weight: 500;
 }
-.features-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  justify-content: center;
-  gap: 2.4rem;
-}
 
 /***************************************/
 /*TESTIMONIALS SECTION                 */
 /***************************************/
 .testimonials-section {
+  padding: 5.6rem 0;
   background-color: #f3f4f6;
+  overflow: hidden;
 }
-
 .testimonials-grid {
   max-width: 120rem;
-
-  padding: 5.6rem;
+  padding: 0 4.8rem;
   margin: 0 auto;
 
   display: grid;
@@ -249,7 +278,6 @@ body {
 .testimonials-grid .testimonial:nth-child(even) {
   justify-self: left;
 }
-
 .testimonial {
   max-width: 100rem;
   height: 25rem;
@@ -270,16 +298,13 @@ body {
 
   transition: all 0.3s;
 }
-
 .testimonial--left {
   padding-left: 4.8rem;
   gap: 1.2rem;
 }
-
 .testimonial:hover {
   box-shadow: rgba(0, 0, 0, 1) 0px 0px 3.6rem;
 }
-
 .testimonial-text {
   padding: 1.6rem;
   align-self: center;
@@ -301,22 +326,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  /* margin-bottom: 1.6rem; */
 }
 .testimonials-stars img {
   height: 2.4rem;
 }
-
 .testimonial-image-nicki {
-  height: 75%;
-
+  max-width: 32rem;
   margin: 1.6rem auto;
-
   display: block;
-
   transform: scale(2);
 }
-
 .testimonial-image-square {
   height: 35rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1.2rem;
@@ -336,7 +355,6 @@ body {
   margin-bottom: 3.2rem;
 }
 .shop-description {
-  max-width: 35rem;
   font-size: 1.8rem;
   line-height: 1.6;
 }
@@ -349,12 +367,27 @@ body {
   row-gap: 2.4rem;
 }
 .shop-option {
-  max-width: 100%;
-
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1.2rem;
 }
 .shop-option--highlight {
   background-color: #f46969;
+  position: relative;
+  overflow: hidden;
+}
+.shop-option--highlight::after {
+  content: "Best Price";
+  position: absolute;
+  color: #fef2f2;
+  background-color: #250606;
+
+  top: 4%;
+  right: -20%;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.6rem 5.6rem;
+  transform: rotate(45deg);
 }
 .shop-option-img-box {
   padding: 2.4rem 2.4rem;
@@ -375,6 +408,8 @@ body {
 }
 .shop-option-content {
   padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
 }
 .shop-option-header {
   font-size: 2rem;
@@ -388,8 +423,12 @@ body {
   flex-direction: column;
   gap: 1.6rem;
 }
+.shop-option-list--highlight {
+  margin-bottom: 2.4rem;
+}
 .shop-option-list-item {
   font-size: 1.6rem;
+  line-height: 1.6;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -410,11 +449,6 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
-}
-.shop-best_price {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 /***************************************/

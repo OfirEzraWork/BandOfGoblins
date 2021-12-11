@@ -1,0 +1,310 @@
+/***************************************/
+/*Laptop - L (1440px)*/
+/***************************************/
+
+@media (max-width: 90em) {
+  .shop-option {
+    width: 90%;
+  }
+
+  .shop-option-img {
+    height: 6.4rem;
+  }
+  .shop-option-header {
+    font-size: 1.8rem;
+  }
+  .shop-option-list-item {
+    font-size: 1.2rem;
+  }
+  .shop-option-price {
+    font-size: 1.2rem;
+  }
+  .shop-option-purchase-btn {
+    font-size: 1.2rem;
+  }
+  .btn-small:link,
+  .btn-small:visited {
+    font-size: 1.2rem;
+    padding: 1rem 1.6rem;
+  }
+}
+
+/***************************************/
+/*Laptop - L 1 (1300px)*/
+/***************************************/
+
+@media (max-width: 81.25em) {
+  .shop-options {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4.8rem;
+  }
+  .shop-option {
+    max-width: 90%;
+  }
+  .shop-option--highlight {
+    grid-column: span 3;
+    max-width: 50%;
+
+    justify-self: center;
+  }
+  .shop-option-list--highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .shop-option--highlight::after {
+    top: 7%;
+    right: -9%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transform: rotate(40deg);
+  }
+}
+/***************************************/
+/*Laptop (1024px)*/
+/***************************************/
+
+@media (max-width: 64em) {
+  .features-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3.6rem;
+  }
+  .features-card {
+    max-width: 34.65rem;
+  }
+  .features-card:nth-child(odd) {
+    justify-self: right;
+  }
+  .features-card:nth-child(even) {
+    justify-self: left;
+  }
+  .testimonial {
+    padding: 2.4rem 1.6rem;
+    gap: 0;
+
+    transition: all 0.3s;
+  }
+  .testimonial-text-name {
+    margin-bottom: 0;
+  }
+  .shop-options {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+  }
+  .shop-option {
+    max-width: 90%;
+  }
+  .shop-option:nth-child(odd) {
+    justify-self: right;
+  }
+  .shop-option:nth-child(even) {
+    justify-self: left;
+  }
+  .shop-option--highlight {
+    grid-column: 2;
+  }
+  .shop-option-list--highlight {
+    display: inherit;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .shop-option--highlight::after {
+    top: 4%;
+    right: -15%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.6rem 5.6rem;
+    transform: rotate(45deg);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+  .my-notes {
+    grid-column: span 2;
+  }
+}
+
+/***************************************/
+/*Laptop 2 (880px)*/
+/***************************************/
+@media (max-width: 55em) {
+  .shop-option {
+    max-width: 100%;
+  }
+  .shop-option--highlight::after {
+    top: 4%;
+    right: -18%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.6rem 5.6rem;
+    transform: rotate(45deg);
+  }
+}
+
+/***************************************/
+/*Tablet (768px)*/
+/***************************************/
+@media (max-width: 48em) {
+  html {
+    font-size: 56.25%;
+  }
+  .hero-section {
+    overflow-x: hidden;
+  }
+  .nav {
+    background-color: #fef2f2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .nav-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 5;
+  }
+  .nav-list {
+    font-size: 2.4rem;
+    padding: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+  }
+  .nav-item a:visited,
+  .nav-item a:link {
+    color: #250606;
+  }
+  .mobile-nav-buttons {
+    display: block;
+    z-index: 10;
+  }
+  .nav-open .mobile-nav-button-icon[name="menu"] {
+    display: none;
+  }
+  .nav-open .mobile-nav-button-icon[name="close"] {
+    display: block;
+    color: #250606;
+  }
+  .hero-text {
+    padding: 4.8rem 8rem;
+  }
+  .testimonial-image-nicki {
+    max-width: 28rem;
+    margin: 1.6rem auto;
+    display: block;
+    transform: scale(2);
+  }
+  .testimonial-image-square {
+    height: 26rem;
+  }
+}
+
+/***************************************/
+/*Tablet (624px)*/
+/***************************************/
+@media (max-width: 39em) {
+  .hero {
+    margin: 0 auto;
+  }
+  .hero-header {
+    margin-bottom: 2.4rem;
+  }
+  .features-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3.6rem;
+  }
+  .features-card {
+    max-width: 34.65rem;
+    justify-self: center !important;
+    align-items: initial;
+  }
+  .testimonials-grid {
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .testimonial {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    transition: all 0.3s;
+  }
+  .testimonial-text {
+    align-self: baseline;
+    gap: 2.4rem;
+  }
+  .testimonial-image-nicki {
+    height: initial;
+    max-width: 22rem;
+    grid-row: 1;
+  }
+  .testimonial picture {
+    justify-self: center;
+    grid-row: 1;
+  }
+  .shop-options {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+  .shop-option {
+    max-width: 75%;
+    justify-self: center !important;
+  }
+  .shop-option--highlight {
+    grid-column: auto;
+  }
+  .shop-option--highlight::after {
+    top: 3%;
+    right: -13%;
+    transform: rotate(40deg);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+  .my-notes {
+    grid-column: auto;
+  }
+  .footer-contact-list {
+    margin-bottom: 0;
+  }
+}
+
+/***************************************/
+/*Mobile (432px)*/
+/***************************************/
+
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+  .hero-text {
+    padding: 4.8rem;
+  }
+  .shop-option--highlight::after {
+    top: 3%;
+    right: -16%;
+    transform: rotate(40deg);
+  }
+}
