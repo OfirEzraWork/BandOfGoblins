@@ -229,6 +229,7 @@ header {
   gap: 2.4rem;
 }
 .features-card {
+  list-style: none;
   padding: 1.6rem 2.4rem;
   height: 100%;
 
