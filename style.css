@@ -113,8 +113,15 @@ body {
 header {
   position: relative;
 }
+
+.sticky .nav-block {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6e0000;
+  z-index: 999;
+}
 .nav-block {
-  /* background-color: #dc2626; */
   padding: 1.6rem 2.4rem;
 
   display: flex;
@@ -134,8 +141,6 @@ header {
 }
 .nav-icon {
   height: 4.8rem;
-}
-.nav {
 }
 .nav-list {
   font-size: 2rem;
@@ -178,7 +183,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.sticky .hero {
+  margin-top: 0;
+}
 .hero {
   margin: 12rem auto;
   max-width: 130rem;
