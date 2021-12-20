@@ -110,6 +110,7 @@ body {
 /***************************************/
 /*NAV SECTION                          */
 /***************************************/
+
 header {
   position: relative;
 }
@@ -222,8 +223,8 @@ header {
 /*FEATURES SECTION                     */
 /***************************************/
 .features-section {
-  margin: 6.4rem auto;
-  padding: 0 3.2rem;
+  margin: 0 auto;
+  padding: 12rem 3.2rem 12rem;
   max-width: 120rem;
 }
 .features-header {
@@ -265,7 +266,7 @@ header {
 /*TESTIMONIALS SECTION                 */
 /***************************************/
 .testimonials-section {
-  padding: 5.6rem 0;
+  padding: 12rem 0;
   background-color: #f3f4f6;
   overflow: hidden;
 }
@@ -354,8 +355,8 @@ header {
 /***************************************/
 
 .shop-section {
-  margin: 6.4rem auto;
-  padding: 0 3.2rem;
+  margin: 0 auto;
+  padding: 12rem 3.2rem;
   max-width: 140rem;
 }
 .shop-header {
